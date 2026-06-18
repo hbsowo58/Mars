@@ -347,7 +347,7 @@
             }
 
             try {
-                const response = await fetch(`${API_BASE_URL}/api/init', {
+                const response = await fetch(`${API_BASE_URL}/api/init`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -381,7 +381,7 @@
             if (!isInitialized || !gameGrid || gameGrid.length === 0) return;
 
             try {
-                const response = await fetch(`${API_BASE_URL}/api/status');
+                const response = await fetch(`${API_BASE_URL}/api/status`);
                 const data = await response.json();
 
                 if (data.grid && data.grid.length > 0) {
@@ -445,7 +445,7 @@
             }
 
             try {
-                const response = await fetch(`${API_BASE_URL}/api/optimize');
+                const response = await fetch(`${API_BASE_URL}/api/optimize`);
                 const data = await response.json();
 
                 document.getElementById('statusMessage').textContent = '최적 경로 실행 중...';
@@ -467,7 +467,7 @@
 
         async function moveRoverAuto(direction) {
             try {
-                const response = await fetch(`${API_BASE_URL}/api/move', {
+                const response = await fetch(`${API_BASE_URL}/api/move`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -541,7 +541,7 @@
             }
 
             try {
-                const response = await fetch(`${API_BASE_URL}/api/move', {
+                const response = await fetch(`${API_BASE_URL}/api/move`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
